@@ -5,5 +5,8 @@ from django.shortcuts import render
 def getData(request):
     return render(request,'form.html')
 
-def predict(request):
+def getResult(request):
     return render(request,'result.html')
+
+def predict():
+    return 0
