@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CredCheck</title>
+    <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        box-sizing: border-box;
+    }
+
+    .form-container h2 {
+        margin-bottom: 24px;
+        font-size: 28px;
+        text-align: center;
+        color: #333;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+        border-color: #3f51b5;
+        outline: none;
+    }
+
+    .form-group input[type="submit"] {
+        grid-column: span 2;
+        background-color: #3f51b5;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-group input[type="submit"]:hover {
+        background-color: #303f9f;
+    }
+
+    @media (max-width: 600px) {
+        .form-container {
+            padding: 20px; /* Reduce padding for smaller screens */
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr; /* Switch to single column */
+        }
+
+        .form-group input[type="submit"] {
+            grid-column: span 1; /* Adjust submit button to single column */
+            margin-top: 20px; /* Increase top margin for better spacing */
+        }
+    }
+    </style>
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

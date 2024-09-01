@@ -1,0 +1,61 @@
+{% extends 'ui_form.html' %}
+
+{% block content %}
+
+<div class="form-container">
+    <img src="./" alt="CredCheck Logo">
+    <h2>Loan Application Form</h2>
+    <form method="POST" action="/submit-loan-application/">
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Education Status</label>
+                <select id="education" name="education" required>
+                    <option value="">Select...</option>
+                    <option value="1">Graduate</option>
+                    <option value="0">Not Graduate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="self_employed">Self Employed</label>
+                <select id="self_employed" name="self_employed" required>
+                    <option value="">Select...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dependents">Number of Dependents</label>
+                <input type="number" id="dependents" name="dependents" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="income_annum">Annual Income</label>
+                <input type="number" id="income_annum" name="income_annum" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="assets_value">Total Assets Value</label>
+                <input type="number" id="assets_value" name="assets_value" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="loan_amount">Loan Amount</label>
+                <input type="number" id="loan_amount" name="loan_amount" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="loan_term">Loan Term (in months)</label>
+                <input type="number" id="loan_term" name="loan_term" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="cibil_score">CIBIL Score</label>
+                <input type="number" id="cibil_score" name="cibil_score" min="300" max="900" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit Application">
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
