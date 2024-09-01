@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def getData(request):
     return render(request,'form.html')
+
+def predict(request):
+    return render(request,'result.html')
