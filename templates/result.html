@@ -4,7 +4,14 @@
 
 <div class="result-container">
     <h2>Loan Approval Status</h2>
-    <p class="status-approved">Congratulations! Your loan has been approved.</p>
+    <h2>Hi <span style="color: #303f9f;">{{name}}</span></h2>
+
+    {% if status == 1 %}
+        <p class="status-approved">Congratulations! Your loan has been approved.</p>
+    {% else %}
+        <p class="status-rejected">Sorry! Your loan has been rejected.</p>
+    {% endif %}
+    
     <a href="/" class="back-button">Back to Home</a>
 </div>
 
