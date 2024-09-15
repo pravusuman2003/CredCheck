@@ -1,8 +1,9 @@
 {% extends 'ui_result.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="result-container">
+    <img src="{% static 'logo.png' %}" alt="CredCheck Logo">
     <h2>Loan Approval Status</h2>
     <h2>Hi <span style="color: #303f9f;">{{name}}</span></h2>
 

@@ -1,9 +1,9 @@
 {% extends 'ui_form.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="form-container">
-    <img src="./" alt="CredCheck Logo">
+    <img src="{% static 'logo.png' %}" alt="CredCheck Logo">
     <h2>Loan Application Form</h2>
     <form action="getResult">
         <div class="form-grid">
